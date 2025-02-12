@@ -1,0 +1,21 @@
+<form action="/api/users/:_id/logs" id="log-form" method="get">
+  <h2>Display logs</h2>
+  <p><code>POST /api/users/:_id/logs</code></p>
+  <input id="lid" type="text" name=":_id" placeholder=":_id" />
+  <input id="lfromdate" type="text" name="from" placeholder="from (yyyy-mm-dd)" />
+  <input id="ltodate" type="text" name="to" placeholder="to (yyyy-mm-dd)" />
+  <input id="ldur" type="text" name="limit" placeholder=limit" />
+  <input type="submit" value="Submit" />
+</form>
+
+<!-- to handel log submition (placement of id route parameter) -->
+<script>
+  const logForm = document.getElementById("log-form")
+  logForm.addEventListener("submit", () => {
+    const userId = document.getElementById("lid").value
+    logForm.action = `/api/users/${userId}/logs`
+    
+    logForm.submit()
+    })
+</script>
+<!-- query parameters are automatically added in a form get request -->
