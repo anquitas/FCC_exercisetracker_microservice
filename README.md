@@ -72,7 +72,7 @@ apart from creating the necessery API endpoints i have also created
 
 
 
-## POST: `'/api/users/:_id/exercises'
+## POST: `'/api/users/:_id/exercises'`
 - purpose: to add 1 exercise for a user and return the added result with user info
 - process: 
   - check if the user exists
